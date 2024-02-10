@@ -3,8 +3,8 @@ This README file is for my midterm project for class: IS6011J2-Web Systems Devel
 
 The following script is supposed to do as follows:
 
-The script is supposed to reads a JSON file whose name is passed as the first positional argument.
-This JSON file contains customers, their information and food orders.
+The script is supposed to read a JSON file whose name is passed as the first positional argument.
+This JSON file contains customers, their information, and food orders.
 
 The script will also create 2 JSON files:
 
@@ -21,4 +21,4 @@ The second JSON file named 'items.json has the following format:
         "orders": 52
 }
 
- The type for both the JSON files are strings.
+ The type for both JSON files are strings.
