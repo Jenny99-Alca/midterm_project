@@ -1,25 +1,31 @@
 import json, argparse
 
-class Midterm:
-    def __init__(self, filename):
-        parser = argparse.ArgumentParser() #how?
-        with open (filename,'r') as f:
-            data = json.load(f)
-            self.timestamp = data["timestamp"]
-            self.name = data["name"]
-            self.phone = data["phone"]
-            self.items = data["items"]
-            self.notes = data["notes"]
+parser = argparse.ArgumentParser()
+parser.add_argument('filename')
+args = parser.parse_args()
 
-            for phone,name in data: #not sure
-                del data[name,phone]
+with open (args.filename,'r') as f:
+    data = json.load(f)
 
-            with open('customers.json','w') as f: #how does it take number and  name & specific format?
-                json.dumps(data, f)
+    customers = {}
+    items = {}
+    for order in data:
+        name = order["name"]
+        phone = order["phone"]
+        customers[phone] = name
+        for item in order["items"]:
+            item_name = item["name"]
+            price = item["price"]
+            if item_name in items:
+                items[item_name]["orders"] += 1
+            else:
+                items[item_name] = {
+                    "price": price,
+                    "orders": 1,
+                }
 
-            count = 0
-            if name in data ["items"] == name:
-                count += 1
-            
-            with open('items.json','w') as f: #how does it take item, price and orders & specific format?)
-                json.dumps(data, f)
+with open('customers.json','w') as f:
+    json.dump(customers, f)
+
+with open('items.json','w') as f:
+    json.dump(items, f)
