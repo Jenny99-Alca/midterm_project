@@ -27,7 +27,7 @@ The second JSON file is named 'Items.json' and displays the following informatio
 (Implemented by lines 11, 16-25.) 
 
 For the second JSON file ('Items.json'), instead of just reordering the data, a calculation was needed for the "orders".
-The number of times an item was ordered was counted and displayed where it says "orders": 52. 
+The number of times an item was ordered, was counted and displayed where it says "orders": 52. 
 The Butter Masala Dosa was ordered 52 times.
 
-Finally, these 2 JSON files were created (and closed) in lines 27 - 31.
+These 2 JSON files were then finally created (and closed) in lines 27 - 31.
