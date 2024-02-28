@@ -9,8 +9,8 @@ First, the script reads in a JSON file whose name is passed in as the first posi
 The JSON file read in should be formatted as the "example_orders.json" file in this git repo. This was the file used for this script.
 It contains customers' names, contact information, food names, and prices.
 
-Based on the information from the JSON file that was read. 
-The script will then say how to format the two new JSON files in the format below.
+Based on the information from the JSON file that was read in. 
+The script then says how to format and what to add in the two new JSON files (format below).
 
 One JSON file is named 'Customers.json' and has the following information and format: 
 {
